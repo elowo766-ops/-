@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Валентинка</title>
@@ -58,12 +58,15 @@
             display: none;
             margin-top: 20px;
         }
+        .hidden {
+            display: none; /* класс для скрытия элементов */
+        }
     </style>
 </head>
 <body>
     <div class="box">
         <div style="font-size: 80px; margin-bottom: 20px;"></div>
-        <h1>Ты станешь моей валентинкой?</h1>
+        <h1 id="question">Ты станешь моей валентинкой?</h1>
         
         <div class="buttons">
             <button class="yes" id="yesBtn">да</button>
@@ -79,19 +82,17 @@
         let noBtn = document.getElementById('noBtn');
         let message = document.getElementById('message');
         let image = document.getElementById('image');
-        let size = 24;
+        let question = document.getElementById('question'); // добавляем переменную для вопроса
 
         noBtn.onclick = function() {
-            size = size + 10;
-            yesBtn.style.fontSize = size + 'px';
-            yesBtn.style.padding = (15 + size / 4) + 'px ' + (40 + size / 2) + 'px';
             message.innerHTML = 'Ну пожалуйста...';
         }
 
         yesBtn.onclick = function() {
-            message.innerHTML = 'УРА!!! Я ТЕБЯ ЛЮБЛЮ!';
-            yesBtn.style.background = '#ff4d6d';
-            noBtn.style.opacity = '0.5';
+            question.classList.add('hidden'); // скрываем вопрос
+            noBtn.classList.add('hidden'); // скрываем кнопку "нет"
+            yesBtn.classList.add('hidden'); // скрываем кнопку "да"
+            message.classList.add('hidden'); // скрываем сообщение
             image.style.display = 'block'; // Показываем изображение
         }
     </script>
