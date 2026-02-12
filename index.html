@@ -92,10 +92,10 @@
         
         <div class="buttons">
             <!-- КНОПКА ДА -->
-            <button class="yes-btn" id="yesBtn">ДА 💖</button>
+            <button class="yes-btn" id="yesBtn">ДА </button>
             
             <!-- КНОПКА НЕТ -->
-            <button class="no-btn" id="noBtn">НЕТ 😢</button>
+            <button class="no-btn" id="noBtn">НЕТ </button>
         </div>
         
         <!-- СООБЩЕНИЕ КОГДА НАЖМУТ ДА -->
@@ -119,20 +119,21 @@
             
             // Смешные сообщения
             if (noClickCount === 1) {
-                message.innerHTML = "😢 Подумай ещё...";
+                message.innerHTML = " Подумай ещё...";
             } else if (noClickCount === 2) {
-                message.innerHTML = "💔 Ну пожалуйста!";
+                message.innerHTML = " Ну пожалуйста!";
             } else if (noClickCount === 3) {
-                message.innerHTML = "🥺 Я буду очень ждать...";
+                message.innerHTML = " Я буду очень ждать...";
             } else if (noClickCount === 4) {
-                message.innerHTML = "💗 Кнопка ДА становится больше!";
+                message.innerHTML = " Кнопка ДА становится больше!";
             } else if (noClickCount >= 5) {
-                message.innerHTML = "😂 Сдавайся уже! ❤️";
-              }
+                message.innerHTML = " Сдавайся бля! ";
+                }
         });
+
         // КОГДА НАЖИМАЮТ ДА
         yesBtn.addEventListener('click', function() {
-            message.innerHTML = "🎉 УРА! Ты сделал(а) меня счастливой! 💘❤️🔥<br><br>❤️❤️❤️❤️❤️❤️❤️";
+            message.innerHTML = " ВААААЙЙЙ ПАСИБАА ! 💘❤️🔥<br><br>❤️❤️❤️❤️❤️❤️❤️";
             yesBtn.style.background = "#ff4d6d";
             noBtn.style.opacity = "0.5";
             noBtn.disabled = true;
