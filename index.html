@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Валентинка </title>
+    <title>Валентинка</title>
     <style>
         body {
             margin: 0;
@@ -54,38 +54,45 @@
             color: red;
             font-weight: bold;
         }
+        .image {
+            display: none;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="box">
         <div style="font-size: 80px; margin-bottom: 20px;"></div>
-        <h1> Ты станешь моей валентинкой? </h1>
+        <h1>Ты станешь моей валентинкой?</h1>
         
         <div class="buttons">
-            <button class="yes" id="yesBtn">да </button>
-            <button class="no" id="noBtn">нет </button>
+            <button class="yes" id="yesBtn">да</button>
+            <button class="no" id="noBtn">нет</button>
         </div>
         
         <div id="message" class="message"></div>
+        <img id="image" class="image" src="https://i.pinimg.com/736x/c8/2c/4f/c82c4f33ac1eae36f0db894659a16f8f.jpg" alt="Valentine Image">
     </div>
 
     <script>
         let yesBtn = document.getElementById('yesBtn');
         let noBtn = document.getElementById('noBtn');
         let message = document.getElementById('message');
+        let image = document.getElementById('image');
         let size = 24;
 
         noBtn.onclick = function() {
             size = size + 10;
             yesBtn.style.fontSize = size + 'px';
-            yesBtn.style.padding = (15 + size/4) + 'px ' + (40 + size/2) + 'px';
-            message.innerHTML = ' Ну пожалуйста...';
+            yesBtn.style.padding = (15 + size / 4) + 'px ' + (40 + size / 2) + 'px';
+            message.innerHTML = 'Ну пожалуйста...';
         }
 
         yesBtn.onclick = function() {
-            message.innerHTML = ' ВААЙ Я ТИПЯ ЛЮПЛЮ ПАСИБАА';
+            message.innerHTML = 'УРА!!! Я ТЕБЯ ЛЮБЛЮ!';
             yesBtn.style.background = '#ff4d6d';
             noBtn.style.opacity = '0.5';
+            image.style.display = 'block'; // Показываем изображение
         }
     </script>
 </body>
